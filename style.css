@@ -1,0 +1,411 @@
+/* ESTILO GERAL DO SITE */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+}
+
+body{
+    background-color: #000000;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 30px;
+    font-size: 24px;
+    font-weight: 500;
+    background-color: #d03994;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover, form .btn-enviar input[type=submit]:hover {
+    box-shadow: 0 0 8px #d03994;
+    transform: scale(1.05);
+}
+
+h2.titulo {
+    color: #eccfd8;
+    font-size: 52px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #d03994;
+}
+
+span.ponto {
+    color: #d03994;
+    font-size: 70px;
+    
+}
+
+
+/* ESTILO DO CABEÇALHO */
+
+header {
+    padding: 40px 4%;    
+}   
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+header .logo a img {
+    cursor: pointer;
+    transition: .2s;
+    width: 30%;
+}
+
+header .logo a img:hover {
+    transform: scale(1.05);
+}
+
+header a{
+    color: #eccfd8;
+    text-decoration: none;
+    display: inline-block;
+    transition: .3s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #1fb9a2;
+    transform: scale(1.05);    
+}
+
+header nav.menu-desktop ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav.menu-desktop li {
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 24px;
+}
+
+
+/* Estilos  do Conteúdo principal */
+
+section.principal {
+    padding: 40px 300px 4%;
+}
+
+section.principal .flex  {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    
+}
+
+.principal h1 {
+    color: #eccfd8;
+    font-size: 62px;
+    line-height: 50px;
+}
+
+
+
+.principal  .texto-principal p  {
+    color: #eccfd8;
+    margin: 40px 0;
+    font-size: 28px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.principal .texto-principal p span{
+    color: #1fb9a2;
+}
+
+.principal .texto-principal p span.span-nome{
+    color: #d03994;
+}
+
+.principal  .imagem-principal img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite
+    alternate;
+}
+
+/* Animação da foto principal */
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+
+/* Estilo da Formação Acadêmica */
+
+section.formacao {
+    padding: 90px 4%;
+}
+
+.formacao .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.formacao .formacao-box {
+    width: calc(33.33% - 30px);
+    color: #eccfd8;
+    padding: 40px;
+    border: 2px solid #eccfd8;
+    margin-top: 45px;
+    border-radius: 30px;
+    transform: .2s;
+    box-sizing: border-box;
+}
+
+.formacao .formacao-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #1fb9a2;
+}
+
+.formacao .formacao-box i {
+    font-size: 90px;
+    color: #d03994;
+}
+
+.formacao .formacao-box h3 {
+    font-size: 34px;
+    margin: 15px 0;
+    color: #d03994;
+}
+
+.formacao .formacao-box p {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 25px;
+}
+
+.formacao .formacao-box p span.entidade{
+    color: #1fb9a2;
+}
+
+.formacao .formacao-box p span{
+    color: #ab3a63;
+    font-weight: 500;
+}
+
+/* Estilo sobre mim */
+
+section.sobre-mim {
+    padding: 120px 4%;
+}
+
+section.sobre-mim .flex {
+    align-items: center;
+    gap: 30px;
+}
+
+.sobre-mim .texto-sobre-mim {
+    color: #eccfd8;
+}
+
+.sobre-mim .texto-sobre-mim h2 {
+    font-size: 52px;
+    line-height: 50px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.sobre-mim .texto-sobre-mim h2 span {
+    color: #d03994;
+    display: inline-block;
+}
+
+.sobre-mim .texto-sobre-mim h2 span.ponto {
+    display: inline-block;
+}
+
+.sobre-mim  .texto-sobre-mim p {
+    margin: 20px 0;
+    text-align: justify;
+    font-size: 24px;
+    line-height: 25px;
+}
+
+.sobre-mim .texto-sobre-mim p span{
+    color: #1fb9a2;
+}
+
+.btn-social button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1fb9a2;
+    font-size: 35px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* ESTILO DO PORTIFÓLIO */
+
+section.portifolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #1fb9a2;
+}
+
+section.portifolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.imagem-projeto {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: .8s;
+    border-radius: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.imagem-projeto:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    color: #d03994;
+    opacity: 0;
+    transition: .8s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* Estilo do Formulario de contato */
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #d03994;
+    font-size: 24px;
+}
+
+form input::placeholder {
+    color: #eccfd8;
+}
+
+form textarea {
+    resize: none;
+    max-height:200px;
+}
+
+form textarea::placeholder {
+    color: #eccfd8;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 60px
+}
+
+form .btn-enviar input[type=submit]{
+    width: 120px;
+    background-color: #1fb9a2;
+    color: #eccfd8;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* Estilo Rodapé */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #1fb9a2;
+}
+
+footer .flex {
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.logo-footer img {
+    cursor: pointer;
+    transition: .2s;
+    width: 30%;
+}
+
+.logo-footer img:hover {
+    transform: scale(1.05);
+}
+
+.borda {
+    border-bottom: 3px solid #d03994;
+}
+
+footer .line-footer p i{
+    color: #d03994;
+    font-size: 34px;
+}
+
+footer .line-footer p a {
+    color: #eccfd8;
+    font-size: 24px;
+    margin-left: 15px;
+}
+
